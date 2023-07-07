@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+#https://www.youtube.com/watch?v=SiuVvskVs-0 - How to make isometric pixelart worldmap in Godot - Professor Bubbles Devlog #6
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
