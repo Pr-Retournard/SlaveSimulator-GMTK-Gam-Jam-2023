@@ -1,4 +1,5 @@
 extends CharacterBody2D
+#Source tilemap https://kenney.nl/assets/isometric-blocks
 #https://www.youtube.com/watch?v=SiuVvskVs-0 - How to make isometric pixelart worldmap in Godot - Professor Bubbles Devlog #6
 
 const SPEED = 300.0
@@ -21,4 +22,5 @@ func _physics_process(delta):
 		velocity.y = directiony * SPEED
 	else:
 		velocity.y = move_toward(velocity.x, 0, SPEED)
+	velocity.normalized()
 	move_and_slide()
