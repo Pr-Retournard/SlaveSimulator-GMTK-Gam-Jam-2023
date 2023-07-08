@@ -427,9 +427,9 @@ navigation_layer_0/layers = 1
 sources/1 = SubResource("TileSetAtlasSource_ypeff")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_o4b3t"]
-vertices = PackedVector2Array(430, -69, 701, -199, 726, -181, 121, 168, 281, 12, -57, -643, 313, -145, 173, -45, -687, -292, -463, -424, -332, -490, -407, -1356, -46, -1160, -165, -1084, -382, -1211, -1243, -868, -982, -860)
+vertices = PackedVector2Array(430, -69, 701, -199, 726, -181, 121, 168, 281, 12, -57, -643, 323, -142, 173, -45, -687, -292, -463, -424, -332, -490, -388, -1362, -46, -1160, -165, -1084, -382, -1211, -1243, -868, -982, -860)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 1, 0, 6), PackedInt32Array(7, 3, 8, 9, 10), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(15, 11, 14, 16), PackedInt32Array(9, 15, 16, 10), PackedInt32Array(7, 4, 3), PackedInt32Array(7, 10, 5, 6)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(173, -45, 281, 12, 430, -69, 313, -145), PackedVector2Array(-46, -1160, -165, -1084, -382, -1211, -982, -860, -332, -490, -57, -643, 701, -199, 726, -181, 121, 168, -687, -292, -463, -424, -1243, -868, -407, -1356)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(173, -45, 281, 12, 430, -69, 323, -142), PackedVector2Array(-46, -1160, -165, -1084, -382, -1211, -982, -860, -332, -490, -57, -643, 701, -199, 726, -181, 121, 168, -687, -292, -463, -424, -1243, -868, -388, -1362)])
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_82l2u")
