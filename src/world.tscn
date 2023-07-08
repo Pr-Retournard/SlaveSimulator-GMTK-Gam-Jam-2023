@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dobgtwy8tgdi8"]
+[gd_scene load_steps=8 format=3 uid="uid://dobgtwy8tgdi8"]
 
+[ext_resource type="Script" path="res://src/world.gd" id="1_82l2u"]
 [ext_resource type="Texture2D" uid="uid://dm0w1x1q8xe76" path="res://assets/Tilesheet/tilesheet_complete.png" id="1_iat0l"]
 [ext_resource type="PackedScene" uid="uid://bidrn8tgcn1d7" path="res://src/Character/player.tscn" id="2_whp5j"]
 [ext_resource type="PackedScene" uid="uid://s1xbnaqj26a6" path="res://src/Character/slave.tscn" id="3_dpd14"]
@@ -431,6 +432,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32
 outlines = Array[PackedVector2Array]([PackedVector2Array(173, -45, 281, 12, 430, -69, 313, -145), PackedVector2Array(-46, -1160, -165, -1084, -382, -1211, -982, -860, -332, -490, -57, -643, 701, -199, 726, -181, 121, 168, -687, -292, -463, -424, -1243, -868, -407, -1356)])
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_82l2u")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -443,10 +445,6 @@ layer_0/tile_data = PackedInt32Array(65535, 1, 0, -1, 1, 0, -65537, 1, 0, -13107
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
-[node name="Slave" parent="." node_paths=PackedStringArray("next_goal_position") instance=ExtResource("3_dpd14")]
-position = Vector2(351, 16)
-next_goal_position = NodePath("../NextGoalPosition")
-
 [node name="NextGoalPosition" type="Marker2D" parent="."]
 position = Vector2(-188, -1140)
 
@@ -457,3 +455,14 @@ navigation_polygon = SubResource("NavigationPolygon_o4b3t")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
+
+[node name="Slaves" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="Slave" parent="Slaves" node_paths=PackedStringArray("next_goal_position") instance=ExtResource("3_dpd14")]
+position = Vector2(351, 16)
+next_goal_position = NodePath("../../NextGoalPosition")
+
+[node name="Slave2" parent="Slaves" node_paths=PackedStringArray("next_goal_position") instance=ExtResource("3_dpd14")]
+position = Vector2(5, -319)
+next_goal_position = NodePath("../../NextGoalPosition")

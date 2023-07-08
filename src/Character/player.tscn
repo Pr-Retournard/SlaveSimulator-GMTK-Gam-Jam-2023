@@ -20,3 +20,10 @@ texture = ExtResource("2_47hog")
 
 [node name="PlayerCollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hxioo")
+
+[node name="DebugLabel" type="Label" parent="."]
+offset_left = -18.0
+offset_top = -67.0
+offset_right = 18.0
+offset_bottom = -41.0
+text = "True"

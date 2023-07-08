@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://s1xbnaqj26a6"]
+[gd_scene load_steps=5 format=3 uid="uid://s1xbnaqj26a6"]
 
 [ext_resource type="Script" path="res://src/Character/slave.gd" id="1_p2r3c"]
 [ext_resource type="Texture2D" uid="uid://be5hmy066re1u" path="res://icon.svg" id="1_y52of"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_otq6x"]
 radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_77v3i"]
+radius = 64.4981
 
 [node name="Slave" type="CharacterBody2D"]
 collision_layer = 4
@@ -27,4 +30,13 @@ debug_enabled = true
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 15
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_77v3i")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var SPEED = 200.0
 @export var next_goal_position : Marker2D
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
+@export var player_is_in_the_right_area : bool = false
 
 func _ready():
 	makepath()
@@ -20,3 +21,12 @@ func makepath():
 
 func _on_timer_timeout():
 	makepath()
+
+
+func _on_area_2d_body_entered(body):
+	if body is Player:
+		player_is_in_the_right_area = true
+
+func _on_area_2d_body_exited(body):
+	if body is Player:
+		player_is_in_the_right_area = false
