@@ -1,9 +1,11 @@
 extends CharacterBody2D
+
+class_name Slave
 #https://www.youtube.com/watch?v=Lt9YdQ6Ztm4 - How To Create PATHFINDING in Godot 4
 @export var SPEED = 200.0
 @export var next_goal_position : Marker2D
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
-@export var player_is_in_the_right_area : bool = false
+@export var is_player_near_the_slave : bool = false
 
 func _ready():
 	makepath()
@@ -24,8 +26,8 @@ func _on_timer_timeout():
 
 func _on_area_2d_body_entered(body):
 	if body is Player:
-		player_is_in_the_right_area = true
+		is_player_near_the_slave = true
 
 func _on_area_2d_body_exited(body):
 	if body is Player:
-		player_is_in_the_right_area = false
+		is_player_near_the_slave = false
