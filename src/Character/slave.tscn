@@ -11,7 +11,7 @@ radius = 64.4981
 
 [node name="Slave" type="CharacterBody2D"]
 collision_layer = 4
-collision_mask = 9
+collision_mask = 13
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_p2r3c")
