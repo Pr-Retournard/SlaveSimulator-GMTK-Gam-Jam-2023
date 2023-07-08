@@ -9,9 +9,9 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	velocity = dir * SPEED
-	velocity.normalized()
 	move_and_slide()
 	
 func _unhandled_input(_event : InputEvent):
 	dir.x = Input.get_axis("ui_left","ui_right")
 	dir.y = Input.get_axis("ui_up","ui_down")
+	dir.normalized()
