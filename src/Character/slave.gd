@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+#https://www.youtube.com/watch?v=Lt9YdQ6Ztm4 - How To Create PATHFINDING in Godot 4
 @export var SPEED = 200.0
 @export var next_goal_position : Marker2D
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
@@ -21,7 +21,6 @@ func makepath():
 
 func _on_timer_timeout():
 	makepath()
-
 
 func _on_area_2d_body_entered(body):
 	if body is Player:
