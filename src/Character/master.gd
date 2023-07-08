@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var SPEED = 100.0
-@export var SPEED_ANGRY = 300
+@export var SPEED_ANGRY = 200
 @export var next_goal_position : Marker2D
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 @export var is_player_near_the_slave : bool = false
@@ -17,11 +17,11 @@ func _ready():
 
 func _physics_process(delta): 
 	if nav_agent.is_navigation_finished():
-		return #Le joueur de bouge plus s'il a atteint son goal
+		return #Le joueur ne bouge plus s'il a atteint son goal
 	else:
 		dir = to_local(nav_agent.get_next_path_position()).normalized() #Donne la direction dans laquelle aller en fonction du chemin trouvé par le node NavigationAgent2D
 	if !enable_to_move:
-#Si on est sur un niveau où il faut suivre des formations le maître ne bouge pas 
+		#Si on est sur un niveau où il faut suivre des formations le maître ne bouge pas 
 		actual_speed = 0
 	velocity = dir * actual_speed
 	move_and_slide()
