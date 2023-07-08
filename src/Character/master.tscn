@@ -60,10 +60,8 @@ states/Walk/position = Vector2(413, 100)
 transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_dfpu3")]
 graph_offset = Vector2(-124, -38)
 
-[sub_resource type="Animation" id="Animation_13e2g"]
-resource_name = "walk_up"
-length = 0.8
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_cx6uj"]
+resource_name = "idle"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -71,61 +69,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 8, 16, 8]
-}
-
-[sub_resource type="Animation" id="Animation_8knvk"]
-resource_name = "walk_up_right"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [1, 9, 17, 9]
-}
-
-[sub_resource type="Animation" id="Animation_jp7gw"]
-resource_name = "walk_right"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [2, 10, 18, 10]
-}
-
-[sub_resource type="Animation" id="Animation_gafrm"]
-resource_name = "walk_bottom_right"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [3, 11, 19, 11]
+"values": [12]
 }
 
 [sub_resource type="Animation" id="Animation_ntvk2"]
@@ -162,6 +109,23 @@ tracks/0/keys = {
 "values": [5, 13, 21, 13]
 }
 
+[sub_resource type="Animation" id="Animation_gafrm"]
+resource_name = "walk_bottom_right"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 11, 19, 11]
+}
+
 [sub_resource type="Animation" id="Animation_61vre"]
 resource_name = "walk_left"
 length = 0.8
@@ -177,6 +141,40 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [6, 14, 22, 14]
+}
+
+[sub_resource type="Animation" id="Animation_jp7gw"]
+resource_name = "walk_right"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [2, 10, 18, 10]
+}
+
+[sub_resource type="Animation" id="Animation_13e2g"]
+resource_name = "walk_up"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 8, 16, 8]
 }
 
 [sub_resource type="Animation" id="Animation_e68en"]
@@ -196,8 +194,10 @@ tracks/0/keys = {
 "values": [7, 15, 23, 15]
 }
 
-[sub_resource type="Animation" id="Animation_cx6uj"]
-resource_name = "idle"
+[sub_resource type="Animation" id="Animation_8knvk"]
+resource_name = "walk_up_right"
+length = 0.8
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -205,10 +205,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [12]
+"values": [1, 9, 17, 9]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u5f8m"]
