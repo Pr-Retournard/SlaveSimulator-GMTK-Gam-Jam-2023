@@ -16,9 +16,9 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	velocity = dir * SPEED
 	move_and_slide()
-	
+
 	animation_tree.set("parameters/Move/blend_position", dir)
-	
+
 func _unhandled_input(_event : InputEvent):
 	dir.x = Input.get_axis("ui_left","ui_right")
 	dir.y = Input.get_axis("ui_up","ui_down")

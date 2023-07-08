@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bidrn8tgcn1d7" path="res://src/Character/player.tscn" id="2_whp5j"]
 [ext_resource type="PackedScene" uid="uid://s1xbnaqj26a6" path="res://src/Character/slave.tscn" id="3_dpd14"]
 [ext_resource type="PackedScene" uid="uid://dxy5e81ruv7hk" path="res://src/Collectable/collectable.tscn" id="5_o0e38"]
+[ext_resource type="PackedScene" uid="uid://bghlmpmmg2y36" path="res://src/Character/master.tscn" id="5_0h7jp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ypeff"]
 texture = ExtResource("1_iat0l")
@@ -470,3 +471,6 @@ next_goal_position = NodePath("../../NextGoalPosition")
 
 [node name="Collectable" parent="." instance=ExtResource("5_o0e38")]
 position = Vector2(-203, -1183)
+
+[node name="Master" parent="." instance=ExtResource("5_0h7jp")]
+position = Vector2(-255, -217)
