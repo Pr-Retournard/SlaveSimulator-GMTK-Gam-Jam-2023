@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dobgtwy8tgdi8"]
+[gd_scene load_steps=9 format=3 uid="uid://dobgtwy8tgdi8"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_82l2u"]
 [ext_resource type="Texture2D" uid="uid://dm0w1x1q8xe76" path="res://assets/Tilesheet/tilesheet_complete.png" id="1_iat0l"]
 [ext_resource type="PackedScene" uid="uid://bidrn8tgcn1d7" path="res://src/Character/player.tscn" id="2_whp5j"]
 [ext_resource type="PackedScene" uid="uid://s1xbnaqj26a6" path="res://src/Character/slave.tscn" id="3_dpd14"]
+[ext_resource type="PackedScene" uid="uid://bghlmpmmg2y36" path="res://src/Character/master.tscn" id="5_0h7jp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ypeff"]
 texture = ExtResource("1_iat0l")
@@ -466,3 +467,6 @@ next_goal_position = NodePath("../../NextGoalPosition")
 [node name="Slave2" parent="Slaves" node_paths=PackedStringArray("next_goal_position") instance=ExtResource("3_dpd14")]
 position = Vector2(5, -319)
 next_goal_position = NodePath("../../NextGoalPosition")
+
+[node name="Master" parent="." instance=ExtResource("5_0h7jp")]
+position = Vector2(-255, -217)
