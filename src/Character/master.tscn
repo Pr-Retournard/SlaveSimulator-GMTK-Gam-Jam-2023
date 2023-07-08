@@ -1,7 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://bghlmpmmg2y36"]
+[gd_scene load_steps=26 format=3 uid="uid://bghlmpmmg2y36"]
 
 [ext_resource type="Texture2D" uid="uid://bnq72w6l5beun" path="res://assets/Trainer/Small-Pokemon-Trainer-Alt.png" id="1_1u5mn"]
 [ext_resource type="Script" path="res://src/Character/master.gd" id="1_d6u4h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3n5hf"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5q1ch"]
 animation = &"walk_left"
@@ -225,6 +227,8 @@ _data = {
 }
 
 [node name="Master" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 11
 script = ExtResource("1_d6u4h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -232,9 +236,11 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_1u5mn")
 hframes = 8
 vframes = 3
-frame = 7
+frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_3n5hf")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_a2pv5")
@@ -245,3 +251,11 @@ parameters/Walk/blend_position = Vector2(0.00110614, 0.0108304)
 libraries = {
 "": SubResource("AnimationLibrary_u5f8m")
 }
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

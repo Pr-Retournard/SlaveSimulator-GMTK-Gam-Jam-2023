@@ -451,6 +451,7 @@ zoom = Vector2(2, 2)
 navigation_polygon = SubResource("NavigationPolygon_o4b3t")
 
 [node name="Player" parent="." instance=ExtResource("2_whp5j")]
+unique_name_in_owner = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -469,8 +470,9 @@ next_goal_position = NodePath("../../NextGoalPosition")
 [node name="Collectable" parent="." instance=ExtResource("5_o0e38")]
 position = Vector2(-59, -499)
 
-[node name="Master" parent="." instance=ExtResource("5_0h7jp")]
+[node name="Master" parent="." node_paths=PackedStringArray("next_goal_position") instance=ExtResource("5_0h7jp")]
 position = Vector2(-255, -217)
+next_goal_position = NodePath("../NextGoalPosition")
 
 [node name="Collectable2" parent="." instance=ExtResource("5_o0e38")]
 position = Vector2(-176, -1168)

@@ -10,10 +10,18 @@ func _ready():
 func _process(delta):
 	update_is_player_near_a_slave()
 	update_scenario()
-	if !is_player_near_a_slave:
-		print("SALOP !!!")
+	update_master_behaviour()
+	update_win_con()
+
+func update_win_con():
 	if scenario_checklist == [true,true,true]:
 		print("You win")
+
+func update_master_behaviour():
+	if !is_player_near_a_slave:
+		$Master.is_angry = true
+	else:
+		$Master.is_angry = false
 
 func update_is_player_near_a_slave():
 	var next_is_player_near_a_slave : bool = false
