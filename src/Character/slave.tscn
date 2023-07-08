@@ -7,6 +7,8 @@
 radius = 16.0
 
 [node name="Slave" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 9
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_p2r3c")
@@ -19,6 +21,7 @@ texture = ExtResource("1_y52of")
 shape = SubResource("CircleShape2D_otq6x")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
 debug_enabled = true
 
 [node name="Timer" type="Timer" parent="."]

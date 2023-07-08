@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var SPEED = 300.0
+@export var SPEED = 200.0
 @export var next_goal_position : Marker2D
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
