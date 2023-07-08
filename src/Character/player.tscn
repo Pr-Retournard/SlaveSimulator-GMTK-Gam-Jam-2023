@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://bidrn8tgcn1d7"]
 
 [ext_resource type="Script" path="res://src/Character/player.gd" id="1_qxsag"]
-[ext_resource type="Texture2D" uid="uid://xbrdbwbswaeb" path="res://assets/Trainer/Small-Pokemon-Trainer.png" id="2_rt0wu"]
+[ext_resource type="Texture2D" uid="uid://6n43nspn1h4j" path="res://assets/Character/Pinkman2.png" id="2_8udlg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxioo"]
 size = Vector2(18, 30)
@@ -238,8 +238,8 @@ wall_min_slide_angle = 0.0
 script = ExtResource("1_qxsag")
 
 [node name="PlayerSprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2, 2)
-texture = ExtResource("2_rt0wu")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_8udlg")
 hframes = 8
 vframes = 3
 frame = 12

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://s1xbnaqj26a6"]
 
 [ext_resource type="Script" path="res://src/Character/slave.gd" id="1_p2r3c"]
-[ext_resource type="Texture2D" uid="uid://be5hmy066re1u" path="res://icon.svg" id="1_y52of"]
+[ext_resource type="Texture2D" uid="uid://6n43nspn1h4j" path="res://assets/Character/Pinkman2.png" id="2_4y3c7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_otq6x"]
 radius = 16.0
@@ -17,8 +17,10 @@ wall_min_slide_angle = 0.0
 script = ExtResource("1_p2r3c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_y52of")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_4y3c7")
+hframes = 8
+vframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_otq6x")
