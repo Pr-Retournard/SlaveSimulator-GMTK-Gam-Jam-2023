@@ -8,18 +8,22 @@ extends CharacterBody2D
 var actual_speed = SPEED
 var is_angry : bool = false 
 var dir : Vector2 = Vector2.ZERO
+var enable_to_move :bool = true
 
 @onready var animation_tree : AnimationTree = $AnimationTree
 
 func _ready():
 	animation_tree.active = true
 
-func _physics_process(delta):
+func _physics_process(delta): 
 	if nav_agent.is_navigation_finished():
 		return #Le joueur de bouge plus s'il a atteint son goal
 	else:
 		var dir = to_local(nav_agent.get_next_path_position()).normalized() #Donne la direction dans laquelle aller en fonction du chemin trouvé par le node NavigationAgent2D
-		velocity = dir * actual_speed
+	if !enable_to_move:
+#Si on est sur un niveau où il faut suivre des formations le maître ne bouge pas 
+		actual_speed = 0
+	velocity = dir * actual_speed
 	move_and_slide()
 	
 	animation_tree.set("parameters/Move/blend_position", dir)
