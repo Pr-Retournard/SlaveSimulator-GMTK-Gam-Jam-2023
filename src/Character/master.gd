@@ -15,7 +15,7 @@ var enable_to_move :bool = true
 func _ready():
 	animation_tree.active = true
 
-func _physics_process(delta): 
+func _physics_process(_delta): 
 	if nav_agent.is_navigation_finished():
 		return #Le joueur ne bouge plus s'il a atteint son goal
 	else:

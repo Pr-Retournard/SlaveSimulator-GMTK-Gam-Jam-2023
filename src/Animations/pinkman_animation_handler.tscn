@@ -1,0 +1,248 @@
+[gd_scene load_steps=25 format=3 uid="uid://da8oj8tkgbqoy"]
+
+[ext_resource type="Texture2D" uid="uid://6n43nspn1h4j" path="res://assets/Character/Pinkman2.png" id="1_ox7j8"]
+[ext_resource type="Script" path="res://src/Animations/pinkman_animation_handler.gd" id="1_tbkvu"]
+
+[sub_resource type="Animation" id="Animation_avxho"]
+resource_name = "idle"
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PinkmanAnimationHandler/PinkmanSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+
+[sub_resource type="Animation" id="Animation_nnrho"]
+resource_name = "walk_down"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PinkmanAnimationHandler/PinkmanSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 12, 20, 12]
+}
+
+[sub_resource type="Animation" id="Animation_hra2a"]
+resource_name = "walk_down_left"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PinkmanAnimationHandler/PinkmanSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [5, 13, 21, 13]
+}
+
+[sub_resource type="Animation" id="Animation_nvvk1"]
+resource_name = "walk_down_right"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PinkmanAnimationHandler/PinkmanSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 11, 19, 11]
+}
+
+[sub_resource type="Animation" id="Animation_qowje"]
+resource_name = "walk_left"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PinkmanAnimationHandler/PinkmanSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [6, 14, 22, 14]
+}
+
+[sub_resource type="Animation" id="Animation_00vt3"]
+resource_name = "walk_right"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PinkmanAnimationHandler/PinkmanSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [2, 10, 18, 10]
+}
+
+[sub_resource type="Animation" id="Animation_d2ikh"]
+resource_name = "walk_up"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PinkmanAnimationHandler/PinkmanSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 0, 8, 16]
+}
+
+[sub_resource type="Animation" id="Animation_oblxu"]
+resource_name = "walk_up_left"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PinkmanAnimationHandler/PinkmanSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [7, 15, 23, 15]
+}
+
+[sub_resource type="Animation" id="Animation_q4qcj"]
+resource_name = "walk_up_right"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PinkmanAnimationHandler/PinkmanSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 9, 17, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_heosl"]
+_data = {
+"idle": SubResource("Animation_avxho"),
+"walk_down": SubResource("Animation_nnrho"),
+"walk_down_left": SubResource("Animation_hra2a"),
+"walk_down_right": SubResource("Animation_nvvk1"),
+"walk_left": SubResource("Animation_qowje"),
+"walk_right": SubResource("Animation_00vt3"),
+"walk_up": SubResource("Animation_d2ikh"),
+"walk_up_left": SubResource("Animation_oblxu"),
+"walk_up_right": SubResource("Animation_q4qcj")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_843v4"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4x8wl"]
+animation = &"walk_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gwbrf"]
+animation = &"walk_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c204b"]
+animation = &"walk_down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v8ira"]
+animation = &"walk_up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i4fd7"]
+animation = &"walk_up_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_m7osg"]
+animation = &"walk_up_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vu1sa"]
+animation = &"walk_down_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ph7fd"]
+animation = &"walk_down_right"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_fqrw7"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_843v4")
+blend_point_0/pos = Vector2(0, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_4x8wl")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_gwbrf")
+blend_point_2/pos = Vector2(-1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_c204b")
+blend_point_3/pos = Vector2(0, 1)
+blend_point_4/node = SubResource("AnimationNodeAnimation_v8ira")
+blend_point_4/pos = Vector2(0, -1)
+blend_point_5/node = SubResource("AnimationNodeAnimation_i4fd7")
+blend_point_5/pos = Vector2(1, -1)
+blend_point_6/node = SubResource("AnimationNodeAnimation_m7osg")
+blend_point_6/pos = Vector2(-1, -1)
+blend_point_7/node = SubResource("AnimationNodeAnimation_vu1sa")
+blend_point_7/pos = Vector2(-1, 1)
+blend_point_8/node = SubResource("AnimationNodeAnimation_ph7fd")
+blend_point_8/pos = Vector2(1, 1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yu7ba"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_3ddq6"]
+states/Move/node = SubResource("AnimationNodeBlendSpace2D_fqrw7")
+states/Move/position = Vector2(407, 66)
+transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition_yu7ba")]
+graph_offset = Vector2(-303, -79)
+
+[node name="PinkmanAnimationHandler" type="Node2D"]
+script = ExtResource("1_tbkvu")
+
+[node name="PinkmanAnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_heosl")
+}
+
+[node name="PinkmanAnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_3ddq6")
+anim_player = NodePath("../PinkmanAnimationPlayer")
+parameters/Move/blend_position = Vector2(0.00221241, -0.99278)
+
+[node name="PinkmanSprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_ox7j8")
+hframes = 8
+vframes = 3
+frame = 12

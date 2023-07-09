@@ -9,7 +9,7 @@ func _ready():
 	$Master.enable_to_move=true
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	is_player_right_place = is_player_near_a_slave
 	update_is_player_near_a_slave()
 	update_scenario()

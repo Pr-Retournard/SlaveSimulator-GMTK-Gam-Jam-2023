@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://s1xbnaqj26a6"]
 
 [ext_resource type="Script" path="res://src/Character/slave.gd" id="1_p2r3c"]
-[ext_resource type="Texture2D" uid="uid://6n43nspn1h4j" path="res://assets/Character/Pinkman2.png" id="2_4y3c7"]
+[ext_resource type="PackedScene" uid="uid://da8oj8tkgbqoy" path="res://src/Animations/pinkman_animation_handler.tscn" id="2_e8t4u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_otq6x"]
 radius = 16.0
@@ -15,12 +15,6 @@ collision_mask = 13
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_p2r3c")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_4y3c7")
-hframes = 8
-vframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_otq6x")
@@ -38,6 +32,8 @@ collision_mask = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_77v3i")
+
+[node name="PinkmanAnimationHandler" parent="." instance=ExtResource("2_e8t4u")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -451,6 +451,7 @@ navigation_polygon = SubResource("NavigationPolygon_jqyla")
 
 [node name="Player" parent="." instance=ExtResource("2_whp5j")]
 unique_name_in_owner = true
+SPEED = 300.0
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
