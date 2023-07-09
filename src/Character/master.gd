@@ -11,6 +11,7 @@ var dir : Vector2
 var enable_to_move :bool = true
 
 @onready var animation_tree : AnimationTree = $AnimationTree
+@onready var arrow_sprite : Sprite2D = $ArrowSprite
 
 func _ready():
 	animation_tree.active = true
@@ -24,6 +25,8 @@ func _physics_process(_delta):
 		#Si on est sur un niveau où il faut suivre des formations le maître ne bouge pas 
 		actual_speed = 0
 	velocity = dir * actual_speed
+	arrow_sprite.rotate(arrow_sprite.get_angle_to(next_goal_position.global_position) + PI/2)
+
 	move_and_slide()
 	animation_tree.set("parameters/Move/blend_position", dir)
 	

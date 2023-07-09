@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://bghlmpmmg2y36"]
+[gd_scene load_steps=27 format=3 uid="uid://bghlmpmmg2y36"]
 
 [ext_resource type="Texture2D" uid="uid://bnq72w6l5beun" path="res://assets/Trainer/Small-Pokemon-Trainer-Alt.png" id="1_1u5mn"]
 [ext_resource type="Script" path="res://src/Character/master.gd" id="1_d6u4h"]
+[ext_resource type="Texture2D" uid="uid://dxok5tpegvqcv" path="res://assets/Trainer/arrow.png" id="3_jyjil"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3n5hf"]
 
@@ -257,5 +258,11 @@ libraries = {
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 autostart = true
+
+[node name="ArrowSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 6)
+scale = Vector2(2, 2)
+texture = ExtResource("3_jyjil")
+offset = Vector2(0, -11)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

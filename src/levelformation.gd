@@ -27,7 +27,6 @@ func _process(delta):
 	update_master_behaviour()
 	update_win_con()
 	is_player_right_place = ($Player.position.distance_to($NextGoalPositions/NextGoalPosition15.position)<64)
-#	print($Player.position.distance_to($NextGoalPosition15.position))
 
 func update_win_con():
 	if scenario_checklist == [true,true,true]:
