@@ -255,14 +255,16 @@ libraries = {
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.1
-autostart = true
-
 [node name="ArrowSprite" type="Sprite2D" parent="."]
 position = Vector2(0, 6)
 scale = Vector2(2, 2)
 texture = ExtResource("3_jyjil")
 offset = Vector2(0, -11)
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="AngrinessDebugLabel" type="Label" parent="."]
+visible = false
+offset_left = -25.0
+offset_top = -17.0
+offset_right = 26.0
+offset_bottom = 9.0
+text = "patate"

@@ -39,6 +39,5 @@ func _on_area_2d_body_exited(body):
 		is_player_near_the_slave = false
 
 func animate():
-	print("pikmin velocity", velocity)
 	pinkmanAnimationHandler.dir = velocity
 	

@@ -19,6 +19,7 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_hxioo")
 
 [node name="DebugLabel" type="Label" parent="."]
+visible = false
 offset_left = -18.0
 offset_top = -67.0
 offset_right = 18.0
