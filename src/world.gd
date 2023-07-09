@@ -18,7 +18,7 @@ func _process(_delta):
 
 func update_win_con():
 	if scenario_checklist == [true,true,true]:
-		get_tree().change_scene_to_file("res://src/Win.tscn")
+		get_tree().change_scene_to_file("res://src/levelformation.tscn")
 		print("You win")
 	if $Player.life_counter == 0:
 		get_tree().change_scene_to_file("res://src/GameOver.tscn")
@@ -48,5 +48,5 @@ func update_scenario():
 		$NextGoalPosition.position = $Collectable2.position
 	if scenario_checklist[1]:
 		$NextGoalPosition.position = $FinalPosition.position
-	final_goal = $Collectable.is_collect and $Collectable2.is_collect and ($Player.position.distance_to($FinalPosition.position)<20)
+	final_goal = $Collectable.is_collect and $Collectable2.is_collect and ($Player.position.distance_to($FinalPosition.position)<111)
 	scenario_checklist = [$Collectable.is_collect, $Collectable2.is_collect ,final_goal]
