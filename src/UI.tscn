@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://vhlgc6sn7uf8"]
+
+[ext_resource type="Script" path="res://src/UI.gd" id="1_2rfrk"]
+[ext_resource type="Texture2D" uid="uid://7a5evipxfxpb" path="res://assets/UI/hearts/tile_0044.png" id="1_52jyx"]
+[ext_resource type="Texture2D" uid="uid://c0aup0ou8j13" path="res://assets/UI/hearts/tile_0046.png" id="2_q0cw1"]
+
+[node name="UiLifeControl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2rfrk")
+
+[node name="Heart4" type="Sprite2D" parent="."]
+position = Vector2(-16, 9)
+texture = ExtResource("2_q0cw1")
+
+[node name="Heart5" type="Sprite2D" parent="."]
+position = Vector2(0, 9)
+texture = ExtResource("2_q0cw1")
+
+[node name="Heart6" type="Sprite2D" parent="."]
+position = Vector2(16, 9)
+texture = ExtResource("2_q0cw1")
+
+[node name="Heart1" type="Sprite2D" parent="."]
+position = Vector2(-16, 9)
+texture = ExtResource("1_52jyx")
+
+[node name="Heart2" type="Sprite2D" parent="."]
+position = Vector2(0, 9)
+texture = ExtResource("1_52jyx")
+
+[node name="Heart3" type="Sprite2D" parent="."]
+position = Vector2(16, 9)
+texture = ExtResource("1_52jyx")

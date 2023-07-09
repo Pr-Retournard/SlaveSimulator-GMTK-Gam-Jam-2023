@@ -18,7 +18,11 @@ func _process(_delta):
 
 func update_win_con():
 	if scenario_checklist == [true,true,true]:
+		get_tree().change_scene_to_file("res://src/Win.tscn")
 		print("You win")
+	if $Player.life_counter == 0:
+		get_tree().change_scene_to_file("res://src/GameOver.tscn")
+		print("Game Over")
 
 func update_master_behaviour():
 	if !is_player_near_a_slave:

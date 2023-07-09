@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bidrn8tgcn1d7"]
+[gd_scene load_steps=6 format=3 uid="uid://bidrn8tgcn1d7"]
 
 [ext_resource type="Script" path="res://src/Character/player.gd" id="1_qxsag"]
 [ext_resource type="PackedScene" uid="uid://da8oj8tkgbqoy" path="res://src/Animations/pinkman_animation_handler.tscn" id="2_b51ap"]
+[ext_resource type="PackedScene" uid="uid://vhlgc6sn7uf8" path="res://src/UI.tscn" id="3_mh1de"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxioo"]
 size = Vector2(18, 30)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7j8ac"]
+radius = 26.0
+height = 86.0
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1000
@@ -27,3 +32,20 @@ offset_bottom = -41.0
 text = "True"
 
 [node name="PinkmanAnimationHandler" parent="." instance=ExtResource("2_b51ap")]
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 15
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_7j8ac")
+
+[node name="HurtTimer" type="Timer" parent="."]
+
+[node name="UiLifeControl" parent="." instance=ExtResource("3_mh1de")]
+offset_top = 43.0
+offset_bottom = 43.0
+
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
+[connection signal="timeout" from="HurtTimer" to="." method="_on_hurt_timer_timeout"]
