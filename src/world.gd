@@ -6,7 +6,8 @@ var scenario_checklist : Array[bool]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	scenario_checklist = [false, false ,false]
-
+	$Master.enable_to_move=true
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	is_player_right_place = is_player_near_a_slave
